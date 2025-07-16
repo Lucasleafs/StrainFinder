@@ -1,0 +1,326 @@
+/* StrainMatch Typography Standards */
+/* This file defines consistent typography patterns for the entire application */
+
+@layer base {
+  /* Typography Scale - Consistent across all components */
+  :root {
+    /* Font Sizes */
+    --text-xs: 0.75rem;     /* 12px */
+    --text-sm: 0.875rem;    /* 14px */
+    --text-base: 1rem;      /* 16px */
+    --text-lg: 1.125rem;    /* 18px */
+    --text-xl: 1.25rem;     /* 20px */
+    --text-2xl: 1.5rem;     /* 24px */
+    --text-3xl: 1.875rem;   /* 30px */
+    --text-4xl: 2.25rem;    /* 36px */
+    --text-5xl: 3rem;       /* 48px */
+    
+    /* Line Heights */
+    --leading-none: 1;
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 2;
+    
+    /* Letter Spacing */
+    --tracking-tighter: -0.05em;
+    --tracking-tight: -0.025em;
+    --tracking-normal: 0em;
+    --tracking-wide: 0.025em;
+    --tracking-wider: 0.05em;
+    --tracking-widest: 0.1em;
+    
+    /* Font Weights */
+    --font-thin: 100;
+    --font-extralight: 200;
+    --font-light: 300;
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+    --font-black: 900;
+  }
+  
+  /* Base Typography Styles */
+  html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-size: 16px;
+    line-height: var(--leading-normal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    font-size: var(--text-base);
+    font-weight: var(--font-normal);
+    line-height: var(--leading-relaxed);
+    color: var(--color-foreground);
+  }
+  
+  /* Heading Styles - Consistent Typography Hierarchy */
+  h1, .text-h1 {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+    margin-bottom: 1rem;
+  }
+  
+  h2, .text-h2 {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+    margin-bottom: 0.75rem;
+  }
+  
+  h3, .text-h3 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-snug);
+    margin-bottom: 0.5rem;
+  }
+  
+  h4, .text-h4 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-medium);
+    line-height: var(--leading-snug);
+    margin-bottom: 0.5rem;
+  }
+  
+  h5, .text-h5 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-medium);
+    line-height: var(--leading-normal);
+    margin-bottom: 0.25rem;
+  }
+  
+  h6, .text-h6 {
+    font-size: var(--text-base);
+    font-weight: var(--font-medium);
+    line-height: var(--leading-normal);
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Body Text Styles */
+  p, .text-body {
+    font-size: var(--text-base);
+    font-weight: var(--font-normal);
+    line-height: var(--leading-relaxed);
+    margin-bottom: 1rem;
+  }
+  
+  .text-body-lg {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+  }
+  
+  .text-body-sm {
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+  }
+  
+  /* Label and Form Text */
+  label, .text-label {
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    line-height: var(--leading-normal);
+    color: var(--color-foreground);
+  }
+  
+  /* Button Text */
+  button, .text-button {
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    line-height: var(--leading-none);
+    letter-spacing: var(--tracking-wide);
+  }
+  
+  /* Input Text */
+  input, textarea, select, .text-input {
+    font-size: var(--text-sm);
+    font-weight: var(--font-normal);
+    line-height: var(--leading-normal);
+  }
+  
+  /* Caption and Small Text */
+  .text-caption, small {
+    font-size: var(--text-xs);
+    font-weight: var(--font-normal);
+    line-height: var(--leading-normal);
+    color: var(--color-muted-foreground);
+  }
+  
+  /* Link Styles */
+  a, .text-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: var(--font-medium);
+  }
+  
+  a:hover, .text-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Code and Monospace */
+  code, pre, .text-mono {
+    font-family: 'SF Mono', Monaco, 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
+    font-size: var(--text-sm);
+  }
+  
+  /* Utility Classes for Typography */
+  .text-display {
+    font-size: var(--text-5xl);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-none);
+    letter-spacing: var(--tracking-tight);
+  }
+  
+  .text-hero {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+  }
+  
+  .text-subtitle {
+    font-size: var(--text-lg);
+    font-weight: var(--font-normal);
+    line-height: var(--leading-relaxed);
+    color: var(--color-muted-foreground);
+  }
+  
+  .text-overline {
+    font-size: var(--text-xs);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-normal);
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+  }
+  
+  /* Cannabis-specific Typography */
+  .strain-name {
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-snug);
+    color: var(--color-foreground);
+  }
+  
+  .strain-type {
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    text-transform: capitalize;
+  }
+  
+  .effect-text {
+    font-size: var(--text-xs);
+    font-weight: var(--font-medium);
+    text-transform: lowercase;
+  }
+  
+  .thc-percentage {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--color-primary);
+  }
+  
+  .price-text {
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    color: var(--color-foreground);
+  }
+  
+  .rating-text {
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+  }
+  
+  /* Card Typography */
+  .card-title {
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-snug);
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-subtitle {
+    font-size: var(--text-sm);
+    font-weight: var(--font-normal);
+    color: var(--color-muted-foreground);
+    margin-bottom: 0.75rem;
+  }
+  
+  .card-description {
+    font-size: var(--text-sm);
+    font-weight: var(--font-normal);
+    line-height: var(--leading-relaxed);
+    color: var(--color-muted-foreground);
+  }
+  
+  /* Responsive Typography */
+  @media (max-width: 640px) {
+    h1, .text-h1 {
+      font-size: var(--text-3xl);
+    }
+    
+    h2, .text-h2 {
+      font-size: var(--text-2xl);
+    }
+    
+    h3, .text-h3 {
+      font-size: var(--text-xl);
+    }
+    
+    .text-display {
+      font-size: var(--text-4xl);
+    }
+    
+    .text-hero {
+      font-size: var(--text-3xl);
+    }
+  }
+  
+  /* Remove default margins for better control */
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+  
+  /* Focus states for accessibility */
+  *:focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+}
+
+/* Typography consistency overrides for specific components */
+@layer components {
+  /* Ensure CardTitle uses consistent typography */
+  .card-title-override {
+    font-size: var(--text-xl) !important;
+    font-weight: var(--font-semibold) !important;
+    line-height: var(--leading-snug) !important;
+  }
+  
+  /* Ensure CardDescription uses consistent typography */
+  .card-description-override {
+    font-size: var(--text-sm) !important;
+    font-weight: var(--font-normal) !important;
+    color: var(--color-muted-foreground) !important;
+  }
+  
+  /* Badge typography consistency */
+  .badge-text {
+    font-size: var(--text-xs) !important;
+    font-weight: var(--font-medium) !important;
+    line-height: var(--leading-none) !important;
+  }
+  
+  /* Button typography consistency */
+  .button-text {
+    font-size: var(--text-sm) !important;
+    font-weight: var(--font-medium) !important;
+    letter-spacing: var(--tracking-wide) !important;
+  }
+}
